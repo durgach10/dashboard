@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LowBond Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>LowBond</h2>
+      <nav>
+        <ul>
+          <li><a href="#all-cases" class="nav-link active">All Cases</a></li>
+          <li><a href="#add-case" class="nav-link">Add New Case</a></li>
+          <li><a href="#profile" class="nav-link">Profile</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <div class="main">
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="title">Dashboard</div>
+        <div class="user-info">Hello, Durga | <a href="#">Logout</a></div>
+      </header>
+
+      <!-- All Cases Section -->
+      <section id="all-cases" class="section">
+        <h2>All Cases</h2>
+        <div class="cases-grid"></div>
+      </section>
+
+      <!-- Add Case Section -->
+      <section id="add-case" class="section hidden">
+        <h2>Add New Case</h2>
+        <form id="caseForm">
+          <label>Client Name</label>
+          <input type="text" id="clientName" required />
+
+          <label>Client Number</label>
+          <input type="tel" id="clientNumber" required />
+
+          <label>Case Title</label>
+          <input type="text" id="caseTitle" required />
+
+          <label>Upload Document</label>
+          <input type="file" id="caseFile" accept=".pdf,.jpg,.png" />
+
+          <label>Hearing Date</label>
+          <input type="date" id="caseDate" required />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <!-- Profile Section -->
+      <section id="profile" class="section hidden">
+        <h2>User Profile</h2>
+        <p><strong>Name:</strong> Durga Chellingi</p>
+        <p><strong>Email:</strong> durga@example.com</p>
+        <p><strong>City:</strong> Razole</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
